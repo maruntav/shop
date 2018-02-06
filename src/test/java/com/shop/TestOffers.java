@@ -113,9 +113,10 @@ public class TestOffers {
 		assertEquals(2.2, shop.findBalance(items).doubleValue(), 0.01);
 	}
 	
+	@Test
 	public void testOffer4(){
 		String[] itemStrArr = {"Apple", "Orange", "Apple", "Orange"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
-		assertEquals(1.0, shop.findBalance(items).doubleValue(), 0.01);
+		assertEquals(1.1, shop.findBalance(items).doubleValue(), 0.01);
 	}
 }

@@ -8,7 +8,11 @@ public class Shop
 {
     public static void main( String[] args )
     {
-    	
+    	Shop shop = new Shop();
+    	String[] itemStrArr = {"Apple", "Orange", "Apple", "Orange"};
+		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
+		double balance = shop.findBalance(items).doubleValue();
+		System.out.println(balance);
     }
     
     public List<Item> itemStringToList(List<String> itemsStr){
