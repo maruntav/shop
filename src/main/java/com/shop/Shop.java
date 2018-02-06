@@ -30,8 +30,12 @@ public class Shop
     public int getItemCount(List<Item> items, Class<?> cl){
     	int count = 0;
     	for(Item item : items){
-    		if(cl==Apple.class) if(item.getName().equals("Apple")) count++;
-    		else if(cl==Orange.class) if(item.getName().equals("Orange")) count++;
+    		if(cl==Apple.class){
+    			if(item.getName().equals("Apple")) count++;
+    		}
+    		else if(cl==Orange.class){
+    			if(item.getName().equals("Orange")) count++;
+    		}
     	}
     	return count;
     }
