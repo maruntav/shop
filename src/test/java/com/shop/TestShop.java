@@ -7,5 +7,5 @@ import static org.junit.Assert.fail;
 
 public class TestShop 
 {
-	
+	//tests done in other classes
 }

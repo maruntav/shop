@@ -3,9 +3,7 @@ package com.shop;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
-import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -52,12 +50,14 @@ public class TestOffers {
 		assertEquals(0, shop.getItemCount(items, Apple.class));
 	}
 	
+	@Test
 	public void threeForTwo(){
 		String[] itemStrArr = {"Orange", "Orange", "Orange", "Orange"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(0.75, shop.threeForTwo(items).doubleValue(), 0.01);
 	}
 	
+	@Test
 	public void threeForTwoN2(){
 		String[] itemStrArr = {"Orange", "Orange", "Orange", "Orange", "Apple", "Orange", "Apple"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
@@ -92,5 +92,23 @@ public class TestOffers {
 		String[] itemStrArr = {"Apple", "Apple", "Orange", "Orange", "Orange"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(1.7, shop.findBalance(items));
+	}
+	
+	public void testOffer2(){
+		String[] itemStrArr = {"Apple", "Apple", "Orange", "Orange", "Orange", "Apple", "Orange"};
+		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
+		assertEquals(2.55, shop.findBalance(items));
+	}
+	
+	public void testOffer3(){
+		String[] itemStrArr = {"Apple", "Apple", "Orange", "Orange", "Orange", "Apple", "Orange", "Orange"};
+		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
+		assertEquals(2.8, shop.findBalance(items));
+	}
+	
+	public void testOffer4(){
+		String[] itemStrArr = {"Apple", "Orange", "Apple", "Orange"};
+		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
+		assertEquals(1.0, shop.findBalance(items));
 	}
 }

@@ -8,7 +8,7 @@ public class Shop
 {
     public static void main( String[] args )
     {
-        
+    	
     }
     
     public List<Item> itemStringToList(List<String> itemsStr){
@@ -27,7 +27,7 @@ public class Shop
     	int count = 0;
     	for(Item item : items){
     		if(cl==Apple.class){
-    			if(item.getName().equals("Apple")) count++;
+    			if(item.getName().equals("Apple")) count++; //could check instance of item
     		}
     		else if(cl==Orange.class){
     			if(item.getName().equals("Orange")) count++;
