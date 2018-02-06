@@ -87,4 +87,10 @@ public class TestOffers {
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(1.8, shop.threeForTwo(items).doubleValue(), 0.01);
 	}
+	
+	public void testOffer1(){
+		String[] itemStrArr = {"Apple", "Apple", "Orange", "Orange", "Orange"};
+		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
+		assertEquals(1.7, shop.findBalance(items));
+	}
 }

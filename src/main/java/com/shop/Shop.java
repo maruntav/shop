@@ -20,11 +20,7 @@ public class Shop
     }
     
     public BigDecimal findBalance(List<Item> items){
-    	BigDecimal balance = new BigDecimal(0.00);
-    	for(Item item : items){
-    		balance = balance.add(item.getPrice());
-    	}
-    	return balance;
+    	return buyOneGetOneFree(items).add(threeForTwo(items));
     }
     
     public int getItemCount(List<Item> items, Class<?> cl){
