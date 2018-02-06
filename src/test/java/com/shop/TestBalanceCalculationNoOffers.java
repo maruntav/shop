@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
+
+import java.math.BigDecimal;
 import java.util.*;
 
 public class TestBalanceCalculationNoOffers {
@@ -13,6 +15,7 @@ public class TestBalanceCalculationNoOffers {
 	public void setUp() throws Exception{
 		shop = new Shop();
 	}
+	
 	@Test
 	public void listAddedCorrectly(){
 		String[] itemStrArr = {"Apple", "Orange", "Apple", "Orange"};
@@ -22,5 +25,11 @@ public class TestBalanceCalculationNoOffers {
 			System.out.println(itemStrArr[i] +" " +items.get(i).getName());
 			assertEquals(itemStrArr[i], items.get(i).getName());
 		}
+	}
+	
+	@Test
+	public void testBalanceCalculation(){
+		BigDecimal balance = shop.findBalance(shop.itemStringToList(Arrays.asList(new String[]{"Apple", "Orange", "Apple", "Orange"})));
+		assertEquals(1.7, balance.doubleValue(), 0.01);
 	}
 }

@@ -17,4 +17,12 @@ public class Shop
     	}
     	return items;
     }
+    
+    public BigDecimal findBalance(List<Item> items){
+    	BigDecimal balance = new BigDecimal(0.00);
+    	for(Item item : items){
+    		balance.add(item.price);
+    	}
+    	return balance;
+    }
 }
