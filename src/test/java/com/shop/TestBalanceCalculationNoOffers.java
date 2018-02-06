@@ -31,4 +31,16 @@ public class TestBalanceCalculationNoOffers {
 		BigDecimal balance = shop.findBalance(shop.itemStringToList(Arrays.asList(new String[]{"Apple", "Orange", "Apple", "Orange"})));
 		assertEquals(1.7, balance.doubleValue(), 0.01);
 	}
+	
+	@Test
+	public void balanceShouldBe1p10(){
+		BigDecimal balance = shop.findBalance(shop.itemStringToList(Arrays.asList(new String[]{"Apple", "Orange", "Orange"})));
+		assertEquals(1.1, balance.doubleValue(), 0.01);
+	}
+	
+	@Test
+	public void balanceShouldBe2p55(){
+		BigDecimal balance = shop.findBalance(shop.itemStringToList(Arrays.asList(new String[]{"Apple", "Orange", "Orange", "Apple", "Orange", "Apple"})));
+		assertEquals(2.55, balance.doubleValue(), 0.01);
+	}
 }
