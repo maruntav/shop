@@ -64,17 +64,20 @@ public class TestOffers {
 		assertEquals(1.0, shop.threeForTwo(items).doubleValue(), 0.01);
 	}
 	
+	@Test
 	public void threeForTwoN3(){
 		String[] itemStrArr = {"Orange", "Orange", "Orange", "Orange", "Apple", "Orange", "Apple", "Orange"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(1.0, shop.threeForTwo(items).doubleValue(), 0.01);
 	}
 	
+	
 	public void buyOneGetOneFree(){
 		String[] itemStrArr = {"Apple", "Apple", "Apple", "Apple", "Apple"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(1.8, shop.threeForTwo(items).doubleValue(), 0.01);
 	}
+	
 	
 	public void buyOneGetOneFreeN2(){
 		String[] itemStrArr = {"Apple", "Orange", "Apple", "Apple", "Orange"};
