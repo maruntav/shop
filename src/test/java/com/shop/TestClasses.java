@@ -20,4 +20,10 @@ public class TestClasses {
 		assertEquals("Apple", apple.getName());
 		assertEquals("Orange", orange.getName());
 	}
+	
+	@Test
+	public void checkPrice(){
+		assertEquals(0.6, apple.price.doubleValue(), 0.01);
+		assertEquals(0.25, orange.price.doubleValue(), 0.01);
+	}
 }
