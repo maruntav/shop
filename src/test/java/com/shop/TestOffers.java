@@ -92,11 +92,11 @@ public class TestOffers {
 		assertEquals(1.8, shop.buyOneGetOneFree(items).doubleValue(), 0.01);
 	}
 	
-	
+	@Test
 	public void testOffer1(){
 		String[] itemStrArr = {"Apple", "Apple", "Orange", "Orange", "Orange"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
-		assertEquals(1.7, shop.findBalance(items));
+		assertEquals(1.1, shop.findBalance(items));
 	}
 	
 	public void testOffer2(){
