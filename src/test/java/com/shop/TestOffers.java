@@ -85,12 +85,13 @@ public class TestOffers {
 		assertEquals(1.2, shop.buyOneGetOneFree(items).doubleValue(), 0.01);
 	}
 	
-	
+	@Test
 	public void buyOneGetOneFreeN3(){
 		String[] itemStrArr = {"Apple", "Apple", "Orange", "Apple", "Apple", "Orange", "Apple"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(1.8, shop.buyOneGetOneFree(items).doubleValue(), 0.01);
 	}
+	
 	
 	public void testOffer1(){
 		String[] itemStrArr = {"Apple", "Apple", "Orange", "Orange", "Orange"};

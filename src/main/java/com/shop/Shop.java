@@ -47,7 +47,7 @@ public class Shop
     
     public BigDecimal buyOneGetOneFree(List<Item> items){
     	int count = getItemCount(items, Apple.class);
-    	int remainder = count%3;
+    	int remainder = count%2;
     	int offerCount = (count-remainder)/2;
     	int countAfterOffer = offerCount+remainder;
     	double balance = countAfterOffer*0.6;
