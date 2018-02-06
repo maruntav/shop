@@ -48,4 +48,13 @@ public class Shop
     	double balance = countAfterOffer*0.25;
     	return new BigDecimal(balance);
     }
+    
+    public BigDecimal buyOneGetOneFree(List<Item> items){
+    	int count = getItemCount(items, Apple.class);
+    	int remainder = count%3;
+    	int offerCount = (count-remainder)/2;
+    	int countAfterOffer = offerCount+1;
+    	double balance = countAfterOffer*0.6;
+    	return new BigDecimal(balance);
+    }
 }
