@@ -1,13 +1,20 @@
 package com.shop;
 
-/**
- * Hello world!
- *
- */
+import java.math.BigDecimal;
+import java.util.*;
+
 public class Shop 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        
+    }
+    
+    public List<Item> itemStringToList(List<String> itemsStr){
+    	List<Item> items = new ArrayList<Item>();
+    	for(String i : itemsStr){
+    		items.add(i.equals("Apple")?new Apple():new Orange());
+    	}
+    	return items;
     }
 }
