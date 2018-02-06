@@ -75,4 +75,16 @@ public class TestOffers {
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(1.8, shop.threeForTwo(items).doubleValue(), 0.01);
 	}
+	
+	public void buyOneGetOneFreeN2(){
+		String[] itemStrArr = {"Apple", "Orange", "Apple", "Apple", "Orange"};
+		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
+		assertEquals(1.2, shop.threeForTwo(items).doubleValue(), 0.01);
+	}
+	
+	public void buyOneGetOneFreeN3(){
+		String[] itemStrArr = {"Apple", "Apple", "Orange", "Apple", "Apple", "Orange", "Apple"};
+		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
+		assertEquals(1.8, shop.threeForTwo(items).doubleValue(), 0.01);
+	}
 }
