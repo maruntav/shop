@@ -1,6 +1,7 @@
 package com.shop;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 
 public class Shop 
@@ -21,7 +22,7 @@ public class Shop
     public BigDecimal findBalance(List<Item> items){
     	BigDecimal balance = new BigDecimal(0.00);
     	for(Item item : items){
-    		balance.add(item.price);
+    		balance = balance.add(item.getPrice());
     	}
     	return balance;
     }

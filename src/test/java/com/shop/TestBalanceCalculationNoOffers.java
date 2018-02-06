@@ -22,7 +22,6 @@ public class TestBalanceCalculationNoOffers {
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(itemStrArr.length, items.size());
 		for(int i = 0; i<items.size(); i++){
-			System.out.println(itemStrArr[i] +" " +items.get(i).getName());
 			assertEquals(itemStrArr[i], items.get(i).getName());
 		}
 	}
