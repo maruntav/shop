@@ -49,7 +49,7 @@ public class Shop
     	int count = getItemCount(items, Apple.class);
     	int remainder = count%3;
     	int offerCount = (count-remainder)/2;
-    	int countAfterOffer = offerCount+1;
+    	int countAfterOffer = offerCount+remainder;
     	double balance = countAfterOffer*0.6;
     	return new BigDecimal(balance);
     }
