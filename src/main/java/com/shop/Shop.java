@@ -39,4 +39,13 @@ public class Shop
     	}
     	return count;
     }
+    
+    public BigDecimal threeForTwo(List<Item> items){
+    	int count = getItemCount(items, Orange.class);
+    	int remainder = count%3;
+    	int offerCount = (count-remainder)/3;
+    	int countAfterOffer = (2*offerCount)+1;
+    	double balance = countAfterOffer*0.25;
+    	return new BigDecimal(balance);
+    }
 }

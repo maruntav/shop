@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -49,5 +50,11 @@ public class TestOffers {
 		String[] itemStrArr = {"Orange", "Orange", "Orange", "Orange"};
 		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
 		assertEquals(0, shop.getItemCount(items, Apple.class));
+	}
+	
+	public void threeForTwo(){
+		String[] itemStrArr = {"Orange", "Orange", "Orange", "Orange"};
+		List<Item> items = shop.itemStringToList(Arrays.asList(itemStrArr));
+		assertEquals(0.75, shop.threeForTwo(items).doubleValue(), 0.01);
 	}
 }
